@@ -4,12 +4,19 @@ import re
 import ngram
 
 def myfunction(seq):
-    index = ngram.NGram(N=2)
-    for term in index.ngrams(index.pad(seq)):
-        print (term)
+    if isinstance(seq, str):
+        index = ngram.NGram(N=2)
+        for term in index.ngrams(index.pad(seq)):
+            print (term)
+    elif isinstance(seq, list):
+        print("分岐できてる")
 
 
 sequence = 'I am an NLPer'
-sequence.translate(" ")
-print(sequence)
-myfunction(sequence)
+sequence_nospace = sequence.replace(" ","")
+myfunction(sequence_nospace)
+
+sequence_li = re.split('\W+',sequence)
+myfunction(sequence_li)
+
+print(sequence_li)
