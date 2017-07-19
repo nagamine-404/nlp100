@@ -17,13 +17,9 @@ def myfunction(seq):
                 sec_word = "-" + seq[count+1]
             print(word +  sec_word)
 
-
-
 sequence = 'I am an NLPer'
 sequence_nospace = sequence.replace(" ","")
 myfunction(sequence_nospace)
 
 sequence_li = re.split('\W+',sequence)
 myfunction(sequence_li)
-
-#print(sequence_li)

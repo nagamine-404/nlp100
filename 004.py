@@ -9,5 +9,6 @@ for (material,count) in zip(materials,range(len(materials))):
     if count+1 in one_word:
         ans.append({count+1:material[:1]})
     else:
-        ans.append({count+1:material[:2]})
+        if material[:1] != "":
+            ans.append({count+1:material[:2]})
 print(ans)
