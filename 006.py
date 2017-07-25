@@ -7,18 +7,26 @@ x_sentence = "paraparaparadise"
 y_sentence = "paragraph"
 bi_gram_list = []
 
-
-
 def bigram(sentence):
     index = ngram.NGram(N=2)
     for term in index.ngrams(index.pad(sentence)):
         bi_gram_list.append(term)
     return (bi_gram_list)
 
-bigram(x_sentence)
-x_list = bi_gram_list
-print (x_list)
 
+X = bi_gram_list
+print("＝＝＝これはX＝＝＝")
+print (bigram(x_sentence))
+
+bi_gram_list = []
 bigram(y_sentence)
-y_list = bi_gram_list
-print (y_list)
+Y = bi_gram_list
+print("＝＝＝これはY＝＝＝")
+print (Y)
+
+print("＝＝＝積集合＝＝＝")
+print(set(X).intersection(set(Y)))
+print("＝＝＝和集合＝＝＝")
+print(set(X) and set(Y))
+print("＝＝＝差集合＝＝＝")
+print(set(X)-set(Y))
