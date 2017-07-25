@@ -5,12 +5,20 @@ import ngram
 
 x_sentence = "paraparaparadise"
 y_sentence = "paragraph"
-x_list = []
+bi_gram_list = []
 
-sentence = x_sentence
+
 
 def bigram(sentence):
     index = ngram.NGram(N=2)
-    for term in index.ngrams(index.pad(x_sentence)):
-        x_list.append(term)
-return (bigrams)
+    for term in index.ngrams(index.pad(sentence)):
+        bi_gram_list.append(term)
+    return (bi_gram_list)
+
+bigram(x_sentence)
+x_list = bi_gram_list
+print (x_list)
+
+bigram(y_sentence)
+y_list = bi_gram_list
+print (y_list)
