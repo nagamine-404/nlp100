@@ -13,7 +13,6 @@ def bigram(sentence):
         bi_gram_list.append(term)
     return (bi_gram_list)
 
-
 X = bi_gram_list
 print("＝＝＝これはX＝＝＝")
 print (bigram(x_sentence))
@@ -28,5 +27,7 @@ print("＝＝＝積集合＝＝＝")
 print(set(X).intersection(set(Y)))
 print("＝＝＝和集合＝＝＝")
 print(set(X) and set(Y))
-print("＝＝＝差集合＝＝＝")
+print("＝＝＝差集合(X-Y)＝＝＝")
 print(set(X)-set(Y))
+print("＝＝＝差集合(Y-X)＝＝＝")
+print(set(Y)-set(X))
