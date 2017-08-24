@@ -6,13 +6,22 @@
 # この関数を用い，英語のメッセージを暗号化・復号化せよ．
 
 def cipher(sentence):
-    list_sentence = []
-    list_sentence = list(sentence)
-    return(list_sentence)
+    ary_sentence = []
+    ary_sentence = list(sentence)
+    rtn_sentence = []
+    rtn_word = ""
+    for stnc in ary_sentence:
+        if 219-ord(stnc) >0 and 219-ord(stnc) < 154:
+            rtn_sentence.append(chr(219-ord(stnc)))
+        else:
+            rtn_sentence.append(stnc)
+    rtn_word="".join(rtn_sentence)
+    return(rtn_word)
 
-sentence = "apple"
-cipher(sentence)
-print(list_sentence)
-print(ord("a"))
-#print(unicode('あ',encording='utf-8'))
-#print('あ'.decode('utf-8'))
+sentence = "Apple"
+print(sentence)
+print_sentence=cipher(sentence)
+print(print_sentence)
+print_sentence=cipher(print_sentence)
+print("".join(print_sentence))
+
